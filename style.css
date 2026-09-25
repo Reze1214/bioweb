@@ -1,0 +1,219 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background-image: url("image/back.jpg");
+    background-size: cover;
+    background-position: center;
+
+    /* Automatically fills the screen */
+    min-height: 100vh;
+
+    padding: 60px 20px;
+
+    /* FLEXBOX */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================
+   PROFILE PICTURE
+========================= */
+
+.profile-picture {
+    width: clamp(150px, 25vw, 250px);
+    height: clamp(150px, 25vw, 250px);
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 5px solid yellow;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   HEADER TEXT
+========================= */
+
+.header h1 {
+    color: white;
+
+    /* Text automatically changes size */
+    font-size: clamp(30px, 5vw, 55px);
+
+    margin-bottom: 15px;
+}
+
+.header p {
+    color: white;
+
+    font-size: clamp(16px, 2vw, 22px);
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   ABOUT BUTTON
+========================= */
+
+.about-link {
+    display: inline-block;
+
+    color: white;
+    background-color: red;
+
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: clamp(15px, 2vw, 20px);
+
+    transition: 0.3s;
+}
+
+.about-link:hover {
+    background-color: darkred;
+}
+
+
+
+
+
+
+/*  IMAGE*/
+
+.image-container {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.large-picture {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+
+    float: left;
+
+    margin: 0 50px 30px 0;
+
+    border-radius: 10px;
+}
+
+
+
+/* TEXT*/
+
+.text-section {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.text-section h1 {
+    font-size: clamp(28px, 4vw, 42px);
+
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    font-size: clamp(16px, 2vw, 20px);
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* EMAIL */
+
+.text-section a {
+    color: blue;
+
+    text-decoration: none;
+
+    word-break: break-word;
+}
+
+.text-section a:hover {
+    text-decoration: underline;
+}
+
+
+/*FOOTER */
+
+footer {
+    width: 100%;
+
+    padding: 20px;
+
+    background-color: papayawhip;
+
+    color: grey;
+
+    text-align: center;
+
+    font-size: clamp(12px, 1.5vw, 16px);
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+/*SECOND SECTION*/
+
+.second-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: clamp(40px, 8vw, 100px)
+             clamp(20px, 6vw, 100px);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(30px, 5vw, 70px);
+}
+
+
+@media (max-width: 768px) {
+    .second-section {
+        flex-direction: column;
+        text-align: center;
+        margin: 40px 20px;
+        gap: 2opx;
+        padding: 0;
+    }
+}
